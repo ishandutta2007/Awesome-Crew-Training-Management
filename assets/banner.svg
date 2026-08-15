@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c18" />
+      <stop offset="50%" stop-color="#0b1528" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Accent Gradient Cyan-Blue -->
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#00c6ff" />
+    </linearGradient>
+
+    <!-- Golden Orange Accent for Altitude / Warning Gauges -->
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb300" />
+      <stop offset="100%" stop-color="#f57c00" />
+    </linearGradient>
+
+    <!-- Radar Sweep Gradient -->
+    <radialGradient id="radar-sweep" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.35" />
+      <stop offset="70%" stop-color="#00f2fe" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-strong" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="3" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#16263f" stroke-width="0.75" opacity="0.6" />
+      <circle cx="40" cy="40" r="1" fill="#1e3a5f" opacity="0.8" />
+    </pattern>
+
+    <!-- Embedded Keyframe Animations -->
+    <style>
+      @keyframes radarRotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes dashFlight {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.3; transform: scale(0.98); }
+        50% { opacity: 0.85; transform: scale(1.03); }
+      }
+      @keyframes planeFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-7px) rotate(1deg); }
+      }
+      @keyframes blinkStatus {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.2; }
+      }
+      @keyframes waveScan {
+        0% { transform: translateX(-100px); opacity: 0; }
+        50% { opacity: 0.7; }
+        100% { transform: translateX(300px); opacity: 0; }
+      }
+
+      .radar-blade {
+        transform-origin: 1040px 180px;
+        animation: radarRotate 6s linear infinite;
+      }
+      .flight-path {
+        stroke-dasharray: 12, 6;
+        animation: dashFlight 18s linear infinite;
+      }
+      .flight-path-2 {
+        stroke-dasharray: 8, 8;
+        animation: dashFlight 12s linear infinite reverse;
+      }
+      .hero-plane {
+        transform-origin: 1040px 180px;
+        animation: planeFloat 5s ease-in-out infinite;
+      }
+      .hud-pulse {
+        animation: pulseGlow 3.5s ease-in-out infinite;
+      }
+      .status-dot {
+        animation: blinkStatus 1.8s ease-in-out infinite;
+      }
+      .title-text {
+        font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .sub-text {
+        font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+        font-weight: 400;
+      }
+      .mono-text {
+        font-family: 'SF Mono', 'Consolas', 'Courier New', monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)" />
+  <rect width="1200" height="360" rx="16" fill="url(#grid)" />
+
+  <!-- Outer Border Frame -->
+  <rect x="1.5" y="1.5" width="1197" height="357" rx="15" fill="none" stroke="#1f3556" stroke-width="2" />
+  <rect x="8" y="8" width="1184" height="344" rx="10" fill="none" stroke="#152744" stroke-width="1" opacity="0.7" />
+
+  <!-- HUD Corner Markers -->
+  <g stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M 24 44 L 24 24 L 44 24" />
+    <path d="M 1176 44 L 1176 24 L 1156 24" />
+    <path d="M 24 316 L 24 336 L 44 336" />
+    <path d="M 1176 316 L 1176 336 L 1156 336" />
+  </g>
+
+  <!-- Dynamic Flight Path Waves (Left to Right) -->
+  <g fill="none" opacity="0.45">
+    <path class="flight-path" d="M -50 290 C 200 240, 450 330, 700 220 C 850 150, 950 190, 1040 180" stroke="#00f2fe" stroke-width="2.5" />
+    <path class="flight-path-2" d="M -50 100 C 280 180, 520 70, 780 140 C 900 170, 980 160, 1040 180" stroke="#4facfe" stroke-width="1.8" />
+  </g>
+
+  <!-- RADAR / AVIONICS DISPLAY HUD (Right Side) -->
+  <g id="radar-system">
+    <!-- Concentric Target Circles -->
+    <circle cx="1040" cy="180" r="140" fill="none" stroke="#162e4e" stroke-width="1.5" />
+    <circle cx="1040" cy="180" r="105" fill="none" stroke="#1c3d69" stroke-width="1.5" />
+    <circle cx="1040" cy="180" r="70" fill="none" stroke="#00f2fe" stroke-width="1.5" opacity="0.3" stroke-dasharray="4,4" />
+    <circle cx="1040" cy="180" r="35" fill="none" stroke="#00f2fe" stroke-width="1" opacity="0.5" />
+    <circle cx="1040" cy="180" r="140" fill="url(#radar-sweep)" opacity="0.15" />
+
+    <!-- Crosshair & Angle Ticks -->
+    <line x1="900" y1="180" x2="1180" y2="180" stroke="#1c3d69" stroke-width="1" stroke-dasharray="6,4" />
+    <line x1="1040" y1="40" x2="1040" y2="320" stroke="#1c3d69" stroke-width="1" stroke-dasharray="6,4" />
+
+    <!-- Animated Rotating Radar Scan Beam -->
+    <g class="radar-blade">
+      <path d="M 1040 180 L 1180 180 A 140 140 0 0 0 1140 85 Z" fill="url(#radar-sweep)" />
+      <line x1="1040" y1="180" x2="1180" y2="180" stroke="#00f2fe" stroke-width="2" filter="url(#glow-cyan)" />
+    </g>
+
+    <!-- Waypoints & Targets on Radar -->
+    <g fill="#00f2fe" opacity="0.85">
+      <polygon points="980,120 985,128 975,128" />
+      <text x="990" y="126" fill="#7ba0cd" class="mono-text" font-size="9">WPT-01</text>
+
+      <polygon points="1110,130 1115,138 1105,138" />
+      <text x="1120" y="136" fill="#7ba0cd" class="mono-text" font-size="9">EBT-CBTA</text>
+
+      <circle cx="990" cy="240" r="3" fill="#ffb300" />
+      <text x="1000" y="243" fill="#ffb300" class="mono-text" font-size="9">ATO-RECS</text>
+
+      <circle cx="1090" cy="230" r="3" fill="#00f2fe" />
+      <text x="1100" y="233" fill="#7ba0cd" class="mono-text" font-size="9">ETR/FTL</text>
+    </g>
+
+    <!-- Hero Airplane Silhouette (Centered on Radar) -->
+    <g class="hero-plane" filter="url(#glow-cyan)">
+      <!-- Jet Body -->
+      <path d="M 1040 135 L 1045 160 L 1075 185 L 1075 192 L 1046 182 L 1045 210 L 1056 222 L 1056 226 L 1040 221 L 1024 226 L 1024 222 L 1035 210 L 1034 182 L 1005 192 L 1005 185 L 1035 160 Z"
+            fill="#00f2fe" opacity="0.95" />
+      <circle cx="1040" cy="180" r="2.5" fill="#ffffff" />
+    </g>
+
+    <!-- Attitude / Compass Scale Arc -->
+    <path d="M 940 180 A 100 100 0 0 1 1140 180" fill="none" stroke="#2a4a75" stroke-width="2" opacity="0.6" />
+    <text x="1040" y="70" text-anchor="middle" fill="#00f2fe" class="mono-text" font-size="11" font-weight="bold" letter-spacing="2">HDG 045° • ALT 36000</text>
+  </g>
+
+  <!-- LEFT HERO SECTION: TITLE, BADGES, AND ECOSYSTEM TAGS -->
+  <g transform="translate(60, 0)">
+    <!-- Top Category Tag -->
+    <g transform="translate(0, 48)">
+      <rect x="0" y="0" width="280" height="26" rx="13" fill="#0e223d" stroke="#00f2fe" stroke-width="1.2" opacity="0.9" />
+      <circle cx="14" cy="13" r="4.5" fill="#00f2fe" class="status-dot" filter="url(#glow-cyan)" />
+      <text x="26" y="17" fill="#b9d6f2" class="mono-text" font-size="11" font-weight="600" letter-spacing="1">AVIATION TRAINING ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="125" fill="#ffffff" class="title-text" font-size="44">
+      Awesome Crew Training
+    </text>
+    <text x="0" y="172" fill="url(#accent-cyan)" class="title-text" font-size="44" filter="url(#glow-cyan)">
+      Management ✈️
+    </text>
+
+    <!-- Subtitle / Meta Description -->
+    <text x="0" y="212" fill="#93adc8" class="sub-text" font-size="15.5">
+      Curated Hub for Airline &amp; ATO Pilot Training Records, CBTA/EBT Grading,
+    </text>
+    <text x="0" y="234" fill="#93adc8" class="sub-text" font-size="15.5">
+      Electronic Training Records (ETR), Compliance Tracking &amp; Aviation LMS
+    </text>
+
+    <!-- Feature Tech Pills / Pillars -->
+    <g transform="translate(0, 268)">
+      <!-- Pill 1: CBTA / EBT -->
+      <g transform="translate(0, 0)">
+        <rect width="135" height="32" rx="7" fill="#0d1f36" stroke="#1d4373" stroke-width="1" />
+        <text x="67.5" y="20" text-anchor="middle" fill="#00f2fe" class="mono-text" font-size="12" font-weight="bold">🎯 CBTA &amp; EBT</text>
+      </g>
+
+      <!-- Pill 2: ETR & Compliance -->
+      <g transform="translate(145, 0)">
+        <rect width="165" height="32" rx="7" fill="#0d1f36" stroke="#1d4373" stroke-width="1" />
+        <text x="82.5" y="20" text-anchor="middle" fill="#5eead4" class="mono-text" font-size="12" font-weight="bold">📋 ETR &amp; Compliance</text>
+      </g>
+
+      <!-- Pill 3: Flight Logs & ATO -->
+      <g transform="translate(320, 0)">
+        <rect width="170" height="32" rx="7" fill="#0d1f36" stroke="#1d4373" stroke-width="1" />
+        <text x="85" y="20" text-anchor="middle" fill="#38bdf8" class="mono-text" font-size="12" font-weight="bold">🛫 ATO &amp; Logbooks</text>
+      </g>
+
+      <!-- Pill 4: SaaS + Open Source -->
+      <g transform="translate(500, 0)">
+        <rect width="180" height="32" rx="7" fill="#0d1f36" stroke="#ffb300" stroke-width="1" opacity="0.9" />
+        <text x="90" y="20" text-anchor="middle" fill="#ffb300" class="mono-text" font-size="12" font-weight="bold">⚡ SaaS &amp; Open-Source</text>
+      </g>
+    </g>
+
+    <!-- Live Telemetry Status Bar -->
+    <g transform="translate(0, 322)">
+      <text x="0" y="0" fill="#5279a4" class="mono-text" font-size="11">
+        SYS.VER: 2026.8 • REGULATORY READY: EASA PART-FCL / FAA PART 141/121 • CURATED ECOSYSTEM
+      </text>
+    </g>
+  </g>
+</svg>
