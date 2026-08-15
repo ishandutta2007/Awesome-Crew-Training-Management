@@ -40,49 +40,20 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-- **[Qualtero](https://www.qualtero.com/)**  
-
-  Aviation training and qualification management platform focused on crew training records, compliance, and operational readiness.
-
-- **[Takeflite](https://www.takeflite.com/)**  
-
-  Flight operations and training management software used by operators for scheduling, crew, and training-related workflows.
-
-- **[FlightLogger](https://www.flightlogger.net/)**  
-
-  Widely adopted training management system for flight schools and ATOs, covering student progression, scheduling, training records, and compliance documentation.
-
-- **[LMS365 Aviation](https://www.lms365.com/)** (or aviation-configured deployments)  
-
-  Microsoft 365-based learning platform adapted for aviation training content delivery and compliance tracking.
-
-- **[Aviation eLearning](https://www.aviationelearning.com/)** (and similar content providers)  
-
-  Specialised aviation e-learning and courseware platforms often paired with TMS systems for theoretical training.
-
-- **[CrewLounge](https://www.crewlounge.aero/)**  
-
-  Crew management and related tools that include training and qualification tracking elements for operators.
-
-- **[Avsoft](https://www.avsoft.com/)**  
-
-  Aviation training content and systems provider offering courseware and supporting platforms for pilot and crew training.
-
-- **[Comply365](https://www.comply365.com/)** (including TrainingManager365 / former MINT)  
-
-  Leading aviation compliance and training management platform used by airlines for document control, training records, and regulatory adherence.
-
-- **[AeroDocs](https://www.aerodocs.com/)**  
-
-  Document and compliance management solutions frequently used alongside training systems in aviation organisations.
-
-- **[Leon Training](https://www.leon.aero/)** (or Leon Software training modules)  
-
-  Training and crew-related capabilities within broader flight operations platforms used by business aviation and operators.
-
-- **[Aviatize](https://www.aviatize.com/)** / **[Hinfact](https://www.hinfact.com/)** / other specialised TMS  
-
-  Additional aviation-specific training management systems focused on ATOs, CBTA/EBT, and integrated scheduling.
+| Platform / Tool | Focus / Description | Starting Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Qualtero](https://www.qualtero.com/)** | Aviation training and qualification management platform (Fox TMS, CBTA/EBT grading, FTL, and regulatory compliance). | Starts at ~$1,000 / month (~$12,000/year base deployment for ATOs/operators) | 30-day guided evaluation sandbox (limited to 10 instructor test accounts upon request) |
+| **[Takeflite](https://www.takeflite.com/)** | Flight operations and training management software for regional carriers and ATOs (scheduling, crew rosters, and compliance). | Starts at $500.00 / month (base module subscription; e.g. Distribution Plus / base ops module) | 14-day guided proof-of-concept trial (full access to core operational modules following fit call) |
+| **[FlightLogger](https://www.flightlogger.net/)** | All-in-one training management platform for flight schools & ATOs (student progress, CBTA syllabi, booking, and records). | €359.00 / month (starting base subscription for flight training organizations) | 14-day interactive evaluation sandbox (pre-loaded with sample fleet/student syllabi upon onboarding) |
+| **[LMS365 / Learn365](https://www.lms365.com/)** | Microsoft 365 & SharePoint integrated LMS adapted for aviation ground school, compliance tracking, and crew recurrent training. | $4.50 / user / month (billed annually, standard tier) | 30-day free trial on Microsoft AppSource (full course catalog & admin access; excludes native mobile/Teams add-on) |
+| **[Aviation eLearning](https://www.aviationelearning.com/)** | Aviation e-learning, cockpit procedure trainers, and virtual 360 courseware for pilot and crew training. | €39.00 / course (pay-as-you-train individual modules; e.g., B737NG procedures) | 30-day free evaluation trial for V360E platform / course demo access (up to 5 trainee licenses) |
+| **[CrewLounge AERO](https://www.crewlounge.aero/)** | Crew suite for pilot logbooks, duty tracking, roster integration, and qualification monitoring. | Free forever tier; paid subscriptions start at €13.49 / year (CONNECT) or €39.99 / year (PILOTLOG Enterprise) | **Free Forever** (Student Edition: up to 100 flights, 60 official logbook formats, 50 reports) |
+| **[Avsoft](https://www.avsoft.com/)** | Aviation training courseware provider offering aircraft systems CBT, general subjects, and portable classroom LMS. | Starts at $59.00 / course (or flexible monthly installment plans for corporate ATOs) | 30-day free evaluation trial for ATOs and airlines (full courseware and LMS module access) |
+| **[Comply365](https://www.comply365.com/)** | Aviation compliance & electronic training records (ETR) suite (TrainingManager365 / former MINT) for airlines and defense. | Enterprise starting tier from ~$15,000 / year (base airline / ATO qualification module) | 30-day guided POC trial for airline training departments (limited to 10 test crew accounts) |
+| **[AeroDocs](https://www.aerodocs.com/)** | Aviation document management and compliance tracking system for flight operations and crew compliance manuals. | Enterprise starting tier from ~$18,000 / year (base airline document & compliance distribution) | 30-day enterprise evaluation pilot (includes sample fleet manual library & 5 test crew licenses) |
+| **[Leon Training](https://www.leon.aero/)** | Flight operations & crew training management platform for business aviation and operators (currency tracking and FTL). | €99.00 / active aircraft / month (BASIC tier) | 30-day free trial (1 full month with unlimited users, fleet setup, and FTL tracking; no credit card required) |
+| **[Aviatize](https://www.aviatize.com/)** | Cloud flight school and ATO management platform with student syllabus tracking, scheduling, and billing. | $29.00 / aircraft / month (billed annually, includes unlimited users) | 30-day guided free trial (unlimited student/instructor accounts following a 30-minute fit call) |
+| **[Hinfact](https://www.hinfact.com/)** | Competency-Based Training & Assessment (CBTA) and Evidence-Based Training (EBT) e-grading and analytics platform. | Starts at ~€199.00 / month (or €15 / pilot / month for ATO training modules) | 30-day guided evaluation sandbox for ATOs/airlines (with sample CBTA grading syllabus & instructor app access) |
 
 
 
